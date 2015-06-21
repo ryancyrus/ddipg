@@ -1,0 +1,94 @@
+
+ .topcorner{
+   
+   top:0;
+   right:0;
+  }
+
+.name{
+	font-size: 20px;
+	font-family: "Helvetica";
+	text-transform: uppercase;
+	/*text-indent: 50px;*/
+	background-color: rgb(160, 160, 223);
+	color: white;
+	padding: 5px 10px;
+}
+
+.cnt{
+	font-size: 12px;
+	font-family: "Helvetica";
+	text-align: right;
+}
+.lbl{
+	color: rgb(160, 160, 223);
+	text-indent: 30px;
+	font-family: "Helvetica";
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+.education_school_name{
+	font-weight: bold;
+	margin-left: 175px;
+	font-family: "Helvetica";
+}
+.skills{
+	margin-left: 175px;	
+	font-family: "Helvetica";
+}
+.education{
+	margin-left: 175px;
+	font-family: "Helvetica";
+}
+.experienceB{
+	font-weight: bold;
+	font-family: "Helvetica";
+	margin-left: 175px;	
+}
+.experience{
+	
+	margin-left: 175px;	
+	font-family: "Helvetica";
+}
+.certifications{
+	margin-left: 175px;
+	font-family: "Helvetica";
+}
+.publicationsB{
+	font-weight: bold;
+	font-family: "Helvetica";
+	margin-left: 175px;		
+}
+.publications{
+	margin-left: 175px;	
+	font-family: "Helvetica";
+}
+.honors_awardsB{
+	font-weight: bold;
+	margin-left: 175px;		
+	font-family: "Helvetica";
+}
+.honors_awards{
+	margin-left: 175px;	
+	font-family: "Helvetica";
+}
+.interests{
+	margin-left: 175px;	
+	font-family: "Helvetica";
+}
+.date{
+	font-style: italic;
+	font-family: "Helvetica";
+	margin-left: 175px;	
+	color: rgb(181, 170, 191);
+}
+.btn{
+	text-align: center;
+}

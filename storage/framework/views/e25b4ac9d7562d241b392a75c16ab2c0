@@ -1,0 +1,34 @@
+<?php $__env->startSection('content'); ?>
+    <div class="container"> 
+
+        <h2 style="text-align: center">
+            <?php echo e($notesheet->notesheet_id); ?>
+
+        </h2>
+        <a href = "<?php echo e(action('NotesheetController@edit', [$notesheet->id])); ?>" style="float:right">
+                        <button type="button" class="btn btn-primary">
+                            Edit
+                        </button>
+                    </a>
+                    <br>
+        <hr>
+
+
+
+        
+
+            <div class="container-fluid">
+                <notesheet>
+                <p><strong>Subject: </strong><?php echo e($notesheet->subject); ?></p>
+                <p><strong>Creator:</strong><?php echo e($notesheet->origin); ?></p>
+                <p><strong>Destination: </strong><?php echo e($notesheet->destination); ?></p>
+                <p><strong>Status: </strong><?php echo e($notesheet->status); ?></p>
+                <p><strong>Current Holder: </strong><?php echo e($notesheet->holder); ?></p>
+                <p><strong>Last Updated At: </strong><?php echo e($notesheet->updated_at); ?></p>
+
+            </div>
+
+        
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
