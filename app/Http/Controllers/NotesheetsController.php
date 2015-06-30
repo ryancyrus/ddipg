@@ -8,11 +8,13 @@ use Request;
 use Auth;
 use App\Http\Requests\ArticleRequest;
 
-class NotesheetController extends Controller {
+class NotesheetsController extends Controller {
 
 	public function __construct()
 	{
 		$this->middleware('auth');
+		//Access Notesheet Middleware from faculty identifier
+		//defined in Kernel.php
 		$this->middleware('faculty');
 
 	}

@@ -13,10 +13,11 @@ Email: <a href="mailto:coordinator.uddp@rgtu.net">coordinator.uddp@rgtu.net</a> 
 
 <br>
 <br>
-Staff:<br>
+<br>
+
+<strong>U.D.D.P Office</strong><br>
 Arvind Choudhary<br>
-U.D.D.P Office<br>
-B-201 U.T.D <br>
+University Teaching Department<br>
 Tel: <a href="tel:07552678862">0755-2678862</a><br>
 				
 			</p>

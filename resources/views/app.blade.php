@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>DDIPG RGPV</title>
 
 	<link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/myedits.css') }}" rel="stylesheet">
@@ -27,9 +27,12 @@
 		{{-- Masthead --}}
 		<div id ="masthead" class="container-fluid masthead " style="margin:0; padding:0;margin-bottom:15px; min-width:100%;">
 			<div class="container">
+
 				<div id = "masthead_row" class="row-fluid">
-					<div class="col-md-8">
+					
+					<div class="col-md-8" >
 						<div id="banner">
+							<img src="/rgtu.png" style="width:10%; float:left; margin-right: 15px; margin-top:-10px;">
 							<h3 style="font-weight:100;">Rajiv Gandhi Proudyogiki Vishwavidyalaya</h3>
 							<h4 style="font-weight:100;">Dual Degree Integrated PG Programme</h4>
 						</div>
@@ -62,17 +65,22 @@
 						<li><a href="{{ url('/contact') }}">CONTACT</a></li>
 						<li><a href="{{ url('nstrack')}}">NOTESHEETS</a></li>
 						<li><a href="{{ url('result')}}">RESULT</a></li>
-						<li><a href="{{ url('stures')}}">STUDENT RESOURCES</a></li>
+						{{-- <li><a href="{{url('qnaforum')}}">DISKUS</a></li> --}}
+						<li><a href="{{ url('stures')}}">RESOURCES</a></li>
+
 						
 					</ul>
 
-					<ul class="nav navbar-nav navbar-right" id="right-nav">
+					<ul class="nav navbar-nav navbar-right" id="right-nav" style="float:left">
 						@if (Auth::guest())
 							<li><a href="{{ url('/auth/login') }}">Login</a></li>
 							<li><a href="{{ url('/auth/register') }}">Register</a></li>
 						@else
+							
+
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
 								</ul>
@@ -106,7 +114,7 @@
 		        					<li><a href="http://www.rgpv.ac.in">Home</a></li>
 		        					<li><a href="#">Maps & Directions</a></li>
 		        					<li><a href="#">Emergency Info</a></li>
-		        					<li><a href="#">Contact Us</a></li>
+		        					<li><a href="/contact">Contact Us</a></li>
 	        					</ul>
 	        				</div>	
 	        			</div>	
@@ -117,7 +125,7 @@
 				<div id = "footerRights"class="container-fluid">
 					<div class="row">
 						<div class="col-md-12">
-							<p>Copyright © 2015 <a href="http://www.rgpv.ac.in" target="blank">RGPV</a>  All rights reserved.</p>
+							<p>Influxys © 2015 All rights reserved.</p>
 							
 						</div>
 						

@@ -4,8 +4,8 @@
 	<div class="container">
 		
 
-	    {!! Form::open(['url' => 'nstrack']) !!}
-	    	@include('nstrack/form', ['SubmitButton'=>"Create Bottle"])
+	    {!! Form::open(['url' => 'qnaforum']) !!}
+	    	@include('qnaforum/form', ['SubmitButton'=>"Create Query"])
 	    {!! Form::close() !!}
 
 

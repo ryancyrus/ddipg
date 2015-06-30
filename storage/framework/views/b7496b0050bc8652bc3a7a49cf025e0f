@@ -50,8 +50,9 @@
 				
 				<div class="col-md-12">
 					<h3>Results</h3>
-					<p class="lead"><a href="/result">View Result</a></p>
-					
+					<ul>
+					<li ><a href="/result">View Result</a></li>
+					</ul>
 				</div>
 				
 				

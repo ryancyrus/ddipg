@@ -1,8 +1,8 @@
 @extends('app')
 
 @section('content')
-	{!! Form::model( $notesheet, ['method' => 'PATCH', 'action' => ['NotesheetController@update', $notesheet->id]]) !!}
-        @include('nstrack/edit_form', ['SubmitButton' => 'Update Bottle'])
+	{!! Form::model( $thread, ['method' => 'PATCH', 'action' => ['ThreadsController@update', $thread->id]]) !!}
+        @include('qnaforum/edit_form', ['SubmitButton' => 'Update Query'])
 
 
     {!! Form::close() !!}

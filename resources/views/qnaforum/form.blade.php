@@ -2,7 +2,7 @@
    {{--  {!! Form::hidden('user_id', 1) !!} --}}
     <div class="form-group">
         {!! Form::label('Question:') !!}
-        {!! Form::text('question_id', null, ['class'=>'form-control']) !!}
+        {!! Form::textarea('question', null, ['class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">

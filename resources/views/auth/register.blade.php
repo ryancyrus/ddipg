@@ -38,7 +38,7 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label">Type</label>
 							<div class="col-md-6">
-								{!! Form::select('type', ['Student', 'Faculty'], null, ['class'=>'form-control']) !!}
+								{!! Form::select('type', ['Student' => 'Student', 'Faculty' => 'Faculty'], null, ['class'=>'form-control']) !!}
 							</div>
 						</div>
 

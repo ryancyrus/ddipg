@@ -5,11 +5,12 @@ use App\Http\Controllers\Controller;
 use App\Result;
 use Illuminate\Http\Request;
 
-class ResultController extends Controller {
+class ResultsController extends Controller {
 
 	public function __construct()
 	{
 		$this->middleware('auth');
+		$this->middleware('student');
 	}
 
 	/**

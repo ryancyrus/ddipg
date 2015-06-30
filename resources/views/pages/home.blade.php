@@ -7,37 +7,49 @@
 				<li data-target="#homeCarousel" data-slide-to= "0" class="active"></li>
 				<li data-target="#homeCarousel" data-slide-to= "1"></li>
 				<li data-target="#homeCarousel" data-slide-to= "2"></li>
+				<li data-target="#homeCarousel" data-slide-to= "3"></li>
 			</ol>
 			{{-- Insert items in carousel --}}
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="/img1.jpeg" alt="First Image" class="img-responsive">
+					<img src="/10.jpg" alt="First Image" class="img-responsive">
 					<div class="container">
 						<div class="carousel-caption">
-							<h3>New York</h3>
-							<p>Aerial View of New York City</p>
+							<h3>RGPV</h3>
+							<p>Aerial View of RGPV</p>
 							
 						</div>
 						
 					</div>
 				</div>
 				<div class="item">
-					<img src="/img2.jpeg" alt="Second Image" class="img-responsive">
+					<img src="/8.jpg" alt="Second Image" class="img-responsive">
 					<div class="container">
 						<div class="carousel-caption">
-							<h3>New York</h3>
-							<p>Aerial View of New York City</p>
+							<h3>RGPV</h3>
+							<p>Administrative Building</p>
 							
 						</div>
 						
 					</div>
 				</div>
 				<div class="item">
-					<img src="/img3.jpeg" alt="Third Image" class="img-responsive">
+					<img src="/9.jpg" alt="Third Image" class="img-responsive">
 					<div class="container">
 						<div class="carousel-caption">
-							<h3>New York</h3>
-							<p>Aerial View of New York City</p>
+							<h3>University Institute of Technology</h3>
+							<p></p>
+							
+						</div>
+						
+					</div>
+				</div>
+				<div class="item">
+					<img src="/11.jpg" alt="Third Image" class="img-responsive">
+					<div class="container">
+						<div class="carousel-caption">
+							<h3>RGPV in Monsoon</h3>
+							<p></p>
 							
 						</div>
 						
@@ -124,9 +136,9 @@
 					<h4>At RGPV</h4>
 					<hr>
 					<div style="background-color:#f5f5f5">
-					<img src="atrgpv.jpg" class="img-responsive">
+					<img src="6.jpg" class="img-responsive">
 					
-						<h3>RGPV center for professional development</h3>
+						<h3 style="padding:5px; text-align:center">RGPV Cafeteria</h3>
 					</div>
 
 					

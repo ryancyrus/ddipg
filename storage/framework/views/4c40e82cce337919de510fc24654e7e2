@@ -5,25 +5,25 @@
             <caption style='text-align: center'><h3>Notesheets</h3></caption>
             <div class="btn-toolbar" role="toolbar" style='float:right'>
                 <div class="btn-group">
-                    <a href = "<?php echo e(action('NotesheetController@index')); ?>">
+                    <a href = "<?php echo e(action('NotesheetsController@index')); ?>">
                         <button type="button" class="btn btn-default">                      
                             All
                         </button>
                     </a>
 
-                    <a href = "<?php echo e(action('NotesheetController@sent')); ?>">
+                    <a href = "<?php echo e(action('NotesheetsController@sent')); ?>">
                         <button type="button" class="btn btn-default">                      
                             Sent
                         </button>
                     </a>
 
-                    <a href = "<?php echo e(action('NotesheetController@receive')); ?>">
+                    <a href = "<?php echo e(action('NotesheetsController@receive')); ?>">
                         <button type="button" class="btn btn-default">                      
                             Receive
                         </button>
                     </a>                    
                     
-                    <a href = "<?php echo e(action('NotesheetController@create')); ?>" >
+                    <a href = "<?php echo e(action('NotesheetsController@create')); ?>" >
                         <button type="button" class="btn btn-primary">
                             Create
                         </button>
@@ -50,7 +50,7 @@
                 
                 <tbody>
                     <tr>
-                        <td><a href="<?php echo e(action('NotesheetController@show', [$notesheet->id])); ?>"><?php echo e($notesheet->notesheet_id); ?></a></td>
+                        <td><a href="<?php echo e(action('NotesheetsController@show', [$notesheet->id])); ?>"><?php echo e($notesheet->notesheet_id); ?></a></td>
                         <td><?php echo e($notesheet->created_at); ?></td>
                         <td><?php echo e($notesheet->subject); ?></td>
                         <td><?php echo e($notesheet->origin); ?></td>

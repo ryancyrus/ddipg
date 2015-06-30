@@ -7,25 +7,25 @@
             <caption style='text-align: center'><h3>Notesheets</h3></caption>
             <div class="btn-toolbar" role="toolbar" style='float:right'>
                 <div class="btn-group">
-                    <a href = "{{ action('NotesheetController@index')}}">
+                    <a href = "{{ action('NotesheetsController@index')}}">
                         <button type="button" class="btn btn-default">                      
                             All
                         </button>
                     </a>
 
-                    <a href = "{{ action('NotesheetController@sent')}}">
+                    <a href = "{{ action('NotesheetsController@sent')}}">
                         <button type="button" class="btn btn-default">                      
                             Sent
                         </button>
                     </a>
 
-                    <a href = "{{ action('NotesheetController@receive')}}">
+                    <a href = "{{ action('NotesheetsController@receive')}}">
                         <button type="button" class="btn btn-default">                      
                             Receive
                         </button>
                     </a>                    
                     
-                    <a href = "{{ action('NotesheetController@create')}}" >
+                    <a href = "{{ action('NotesheetsController@create')}}" >
                         <button type="button" class="btn btn-primary">
                             Create
                         </button>
@@ -52,7 +52,7 @@
                 
                 <tbody>
                     <tr>
-                        <td><a href="{{ action('NotesheetController@show', [$notesheet->id]) }}">{{ $notesheet->notesheet_id }}</a></td>
+                        <td><a href="{{ action('NotesheetsController@show', [$notesheet->id]) }}">{{ $notesheet->notesheet_id }}</a></td>
                         <td>{{ $notesheet->created_at }}</td>
                         <td>{{ $notesheet->subject }}</td>
                         <td>{{ $notesheet->origin }}</td>

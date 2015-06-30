@@ -60,7 +60,7 @@ class PagesController extends Controller {
 
 	public function stures()
 	{
-		return view('pages.stures');
+		return view('pages.stures1');
 	}
 
 	public function resumemakr(){

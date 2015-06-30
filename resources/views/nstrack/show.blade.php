@@ -6,7 +6,7 @@
         <h2 style="text-align: center">
             {{ $notesheet->notesheet_id }}
         </h2>
-        <a href = "{{ action('NotesheetController@edit', [$notesheet->id])}}" style="float:right">
+        <a href = "{{ action('NotesheetsController@edit', [$notesheet->id])}}" style="float:right">
                         <button type="button" class="btn btn-primary">
                             Edit
                         </button>

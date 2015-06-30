@@ -15,7 +15,15 @@ class CreateThreadsTable extends Migration {
 		Schema::create('threads', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('question');
+			$table->string('subject');
+			$table->string('origin');
+			$table->string('destination');
+			$table->string('reply');
 			$table->timestamps();
+
+			$table->foreign('origin')->references('identif')->on('users');
+			$table->foreign('destination')->references('identif')->on('users');
 		});
 	}
 

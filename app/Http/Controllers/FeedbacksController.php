@@ -2,10 +2,12 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Feedback;
+use Request;
+// use Illuminate\Http\Request;
+use App\Http\Requests\FeedbackRequest;
 
-use Illuminate\Http\Request;
-
-class ThreadController extends Controller {
+class FeedbacksController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -15,6 +17,7 @@ class ThreadController extends Controller {
 	public function index()
 	{
 		//
+		// return view('feedback.create');
 	}
 
 	/**
@@ -25,6 +28,7 @@ class ThreadController extends Controller {
 	public function create()
 	{
 		//
+		return view('feedback.create');
 	}
 
 	/**
@@ -32,9 +36,12 @@ class ThreadController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(FeedbackRequest $request)
 	{
 		//
+		$input = Request::all();
+		Feedback::create($input);
+		return redirect('home');
 	}
 
 	/**

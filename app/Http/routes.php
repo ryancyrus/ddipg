@@ -25,11 +25,20 @@ Route::get('/campus', 'PagesController@campus');
 Route::get('/stures', 'PagesController@stures');
 Route::get('/cvmakr','PagesController@resumemakr');
 
-Route::get('nstrack/sent', 'NotesheetController@sent');
-ROute::get('nstrack/receive', 'NotesheetController@receive');
-Route::resource('nstrack', 'NotesheetController');
-Route::get('/result', 'ResultController@index');
-// Route::resource('diskus', 'DiskusController');
+Route::get('nstrack/sent', 'NotesheetsController@sent');
+ROute::get('nstrack/receive', 'NotesheetsController@receive');
+Route::resource('nstrack', 'NotesheetsController');
+Route::get('/result', 'ResultsController@index');
+
+Route::get('qnaforum/sent', 'ThreadsController@sent');
+Route::get('qnaforum/receive', 'ThreadsController@receive');
+Route::resource('qnaforum', 'ThreadsController');
+
+Route::resource('events', 'EventsController');
+// Route::get('feedback/create', ['as' => 'feedback', 'uses' => 'FeedbacksController@create']);
+Route::get('feedback', ['as' => 'feedback.create', 'uses' => 'FeedbacksController@create']);
+Route::post('feedback', 'FeedbacksController@store');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
