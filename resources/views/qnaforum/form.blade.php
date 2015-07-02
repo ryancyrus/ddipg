@@ -1,31 +1,36 @@
     <!-- Temporary -->
    {{--  {!! Form::hidden('user_id', 1) !!} --}}
-    <div class="form-group">
+  <div class="row"> 
+    <div class="input-field col s12">
         {!! Form::label('Question:') !!}
-        {!! Form::textarea('question', null, ['class'=>'form-control']) !!}
+        {!! Form::textarea('question', null, ['class' => 'materialize-textarea']) !!}
     </div>
-
-    <div class="form-group">
+  </div>  
+   <div class="row"> 
+    <div class="input-field col s12">
         {!! Form::label('Subject:') !!}
-        {!! Form::text('subject', null, ['class'=>'form-control']) !!}
+        {!! Form::text('subject', null) !!}
     </div>
-    
-    <div class="form-group">
+     </div>  
+     <div class="row"> 
+    <div class="input-field col s12">
         {!! Form::label('Enquirer:') !!}
-        {!! Form::text('origin',  Auth::user()->identif, ['class'=>'form-control', 'readonly']) !!}
+        {!! Form::text('origin',  Auth::user()->identif, ['readonly']) !!}
     </div>
-    
-    <div class="form-group">
+     </div>  
+     <div class="row"> 
+    <div class="input-field col s12">
         {!! Form::label('Faculty:') !!}
-        {!! Form::text('destination', null, ['class'=>'form-control']) !!}
+        {!! Form::text('destination', null) !!}
     </div>
+     </div>  
 
 
     
-
-    <div class="form-group">
-        {!! Form::submit($SubmitButton, ['class' => 'btn btn-primary form-control'])!!}
+     <div class="row"> 
+    <div class="input-field col s12">
+        {!! Form::submit($SubmitButton, ['class' => 'btn'])!!}
     </div>
-
+ </div>  
 
 

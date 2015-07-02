@@ -1,21 +1,8 @@
 @extends('app')
 @section('content')
-	<div class="container">
+	
 		<div class="row">
-			<div id="sidenav" class="col-md-2">
-				<ul class="nav sidenav" style="background-color:#f5f5f5" >
-					<lh style="text-align:center"><h4>About RGPV</h4></lh>
-					<hr>
-					<li><a href="#history">History</a></li>
-					<li><a href="#vision">Vision</a></li>
-					<li><a href="#VCMessage">VC's Message</a></li>
-					<li><a href="#Laws">Laws</a></li>
-					<li><a href="#administration">Administration</a></li>
-					<li><a href="#bos">Board of Studies</a></li>
-				</ul>
-				
-			</div>
-			<div class="col-md-10">
+			<div class="col s12 m9 l10">
 				<div id="history">
 					<h3>History</h3>
 					<p class="lead">
@@ -196,5 +183,5 @@
 			
 		</div>
 		
-	</div>
+	
 @stop

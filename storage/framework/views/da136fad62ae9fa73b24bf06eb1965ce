@@ -1,8 +1,8 @@
 <?php $__env->startSection('content'); ?>
-	<div class="container">
+	<div class="row">
 		
 
-	    <?php echo Form::open(['url' => 'nstrack']); ?>
+	    <?php echo Form::open(['url' => 'nstrack', 'class' => 'col s10 offset-s1 m6 offset-m3 l4 offset-l4']); ?>
 
 	    	<?php echo $__env->make('nstrack/form', ['SubmitButton'=>"Create Bottle"], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 	    <?php echo Form::close(); ?>

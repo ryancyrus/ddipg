@@ -1,15 +1,16 @@
 @extends('app')
 
 @section('content')
-	<div class="container">
+	<div class="row">
 		
 
-	    {!! Form::open(['url' => 'qnaforum']) !!}
+	    {!! Form::open(['url' => 'qnaforum', 'class' => 'col s10 offset-s1 m8 offset-m2 l6 offset-l3']) !!}
 	    	@include('qnaforum/form', ['SubmitButton'=>"Create Query"])
+	    	@include('errors/listformerrors')
 	    {!! Form::close() !!}
 
 
-	   	@include('errors/listformerrors')
+	   	
 
    </div>
 @stop    

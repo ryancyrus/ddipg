@@ -1,8 +1,8 @@
  @if($errors->any())
  		
-        <ul class="alert alert-danger list-unstyled">
+        <ul class="collection">
             @foreach ($errors->all() as $error)
-                <li>{{$error }}</li>
+                <li class="collection-item red-text">{{$error }}</li>
             @endforeach
         </ul>
            

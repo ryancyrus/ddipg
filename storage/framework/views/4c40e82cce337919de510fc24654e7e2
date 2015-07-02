@@ -1,70 +1,74 @@
 <?php $__env->startSection('content'); ?>
-	<?php /* <h2>Notesheets</h2> */ ?>
-    <div class ="table-responsive">
-        <table class="table">
-            <caption style='text-align: center'><h3>Notesheets</h3></caption>
-            <div class="btn-toolbar" role="toolbar" style='float:right'>
-                <div class="btn-group">
-                    <a href = "<?php echo e(action('NotesheetsController@index')); ?>">
-                        <button type="button" class="btn btn-default">                      
+	<table class="responsive-table striped centered">
+            <caption style='text-align: center'><h3 class="header">Notesheets</h3></caption>
+            <div style='float:right'>
+                
+                    <a  class="waves-effect waves-light btn" href = "<?php echo e(action('NotesheetsController@index')); ?>">
+                        <?php /* <button type="button" class="btn btn-default">                       */ ?>
                             All
-                        </button>
+                        <?php /* </button> */ ?>
                     </a>
 
-                    <a href = "<?php echo e(action('NotesheetsController@sent')); ?>">
-                        <button type="button" class="btn btn-default">                      
+                    <a class="waves-effect waves-light btn" href = "<?php echo e(action('NotesheetsController@sent')); ?>">
+                        <?php /* <button type="button" class="btn btn-default">                       */ ?>
                             Sent
-                        </button>
+                        <?php /* </button> */ ?>
                     </a>
 
-                    <a href = "<?php echo e(action('NotesheetsController@receive')); ?>">
-                        <button type="button" class="btn btn-default">                      
+                    <a class="waves-effect waves-light btn" href = "<?php echo e(action('NotesheetsController@receive')); ?>">
+                        <?php /* <button type="button" class="btn btn-default">                       */ ?>
                             Receive
-                        </button>
+                        <?php /* </button> */ ?>
                     </a>                    
                     
-                    <a href = "<?php echo e(action('NotesheetsController@create')); ?>" >
-                        <button type="button" class="btn btn-primary">
+                    <a class="waves-effect waves-light btn" href = "<?php echo e(action('NotesheetsController@create')); ?>" >
+                        <?php /* <button type="button" class="btn btn-primary"> */ ?>
                             Create
-                        </button>
+                        <?php /* </button> */ ?>
                     </a>
                     
-                </div>
             </div>
-            <thead style="background-color:#ff5252; color:#ffffff">
+            <thead>
 
                 <tr>
-                    <td>Notesheet ID</td>
-                    <td>Created At</td>
-                    <td>Subject</td>
-                    <td>Origin</td>
-                    <td>Destination</td>
-                    <td>Status</td>
-                    <td>Holder</td>
-                    <td>Updated At</td>
+                    <th>Notesheet ID</th>
+                    <th>Created At</th>
+                    <th>Subject</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                    <th>Holder</th>
+                    <th>Updated At</th>
                 </tr>
             </thead>
-        <?php foreach($notesheets as $notesheet): ?>
+        <?php /* <?php foreach($notesheets as $notesheet): ?> */ ?>
             
-            <notesheet>
+            <?php /* <notesheet> */ ?>
                 
                 <tbody>
-                    <tr>
-                        <td><a href="<?php echo e(action('NotesheetsController@show', [$notesheet->id])); ?>"><?php echo e($notesheet->notesheet_id); ?></a></td>
-                        <td><?php echo e($notesheet->created_at); ?></td>
-                        <td><?php echo e($notesheet->subject); ?></td>
-                        <td><?php echo e($notesheet->origin); ?></td>
-                        <td><?php echo e($notesheet->destination); ?></td>
-                        <td><?php echo e($notesheet->status); ?></td>
-                        <td><?php echo e($notesheet->holder); ?></td>
-                        <td><?php echo e($notesheet->updated_at); ?></td>
-                    </tr>
+                    <?php foreach($notesheets as $notesheet): ?>
+            
+                        <notesheet>
+                            <tr>
+                                <td><a href="<?php echo e(action('NotesheetsController@show', [$notesheet->id])); ?>"><?php echo e($notesheet->notesheet_id); ?></a></td>
+                                <td><?php echo e($notesheet->created_at); ?></td>
+                                <td><?php echo e($notesheet->subject); ?></td>
+                                <td><?php echo e($notesheet->origin); ?></td>
+                                <td><?php echo e($notesheet->destination); ?></td>
+                                <td><?php echo e($notesheet->status); ?></td>
+                                <td><?php echo e($notesheet->holder); ?></td>
+                                <td><?php echo e($notesheet->updated_at); ?></td>
+                            </tr>
+
+                         </notesheet>
+            
+                    <?php endforeach; ?>
                 </tbody>
 
-            </notesheet>
+            <?php /* </notesheet>
             
-        <?php endforeach; ?>
-        </table>
-    </div>
+        <?php endforeach; ?> */ ?>
+     </table>
+    
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

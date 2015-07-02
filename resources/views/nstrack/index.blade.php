@@ -1,71 +1,75 @@
 @extends('app')
 
 @section('content')
-	{{-- <h2>Notesheets</h2> --}}
-    <div class ="table-responsive">
-        <table class="table">
-            <caption style='text-align: center'><h3>Notesheets</h3></caption>
-            <div class="btn-toolbar" role="toolbar" style='float:right'>
-                <div class="btn-group">
-                    <a href = "{{ action('NotesheetsController@index')}}">
-                        <button type="button" class="btn btn-default">                      
+	<table class="responsive-table striped centered">
+            <caption style='text-align: center'><h3 class="header">Notesheets</h3></caption>
+            <div style='float:right'>
+                
+                    <a  class="waves-effect waves-light btn" href = "{{ action('NotesheetsController@index')}}">
+                        {{-- <button type="button" class="btn btn-default">                       --}}
                             All
-                        </button>
+                        {{-- </button> --}}
                     </a>
 
-                    <a href = "{{ action('NotesheetsController@sent')}}">
-                        <button type="button" class="btn btn-default">                      
+                    <a class="waves-effect waves-light btn" href = "{{ action('NotesheetsController@sent')}}">
+                        {{-- <button type="button" class="btn btn-default">                       --}}
                             Sent
-                        </button>
+                        {{-- </button> --}}
                     </a>
 
-                    <a href = "{{ action('NotesheetsController@receive')}}">
-                        <button type="button" class="btn btn-default">                      
+                    <a class="waves-effect waves-light btn" href = "{{ action('NotesheetsController@receive')}}">
+                        {{-- <button type="button" class="btn btn-default">                       --}}
                             Receive
-                        </button>
+                        {{-- </button> --}}
                     </a>                    
                     
-                    <a href = "{{ action('NotesheetsController@create')}}" >
-                        <button type="button" class="btn btn-primary">
+                    <a class="waves-effect waves-light btn" href = "{{ action('NotesheetsController@create')}}" >
+                        {{-- <button type="button" class="btn btn-primary"> --}}
                             Create
-                        </button>
+                        {{-- </button> --}}
                     </a>
                     
-                </div>
             </div>
-            <thead style="background-color:#ff5252; color:#ffffff">
+            <thead>
 
                 <tr>
-                    <td>Notesheet ID</td>
-                    <td>Created At</td>
-                    <td>Subject</td>
-                    <td>Origin</td>
-                    <td>Destination</td>
-                    <td>Status</td>
-                    <td>Holder</td>
-                    <td>Updated At</td>
+                    <th>Notesheet ID</th>
+                    <th>Created At</th>
+                    <th>Subject</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                    <th>Holder</th>
+                    <th>Updated At</th>
                 </tr>
             </thead>
-        @foreach($notesheets as $notesheet)
+        {{-- @foreach($notesheets as $notesheet) --}}
             
-            <notesheet>
+            {{-- <notesheet> --}}
                 
                 <tbody>
-                    <tr>
-                        <td><a href="{{ action('NotesheetsController@show', [$notesheet->id]) }}">{{ $notesheet->notesheet_id }}</a></td>
-                        <td>{{ $notesheet->created_at }}</td>
-                        <td>{{ $notesheet->subject }}</td>
-                        <td>{{ $notesheet->origin }}</td>
-                        <td>{{ $notesheet->destination }}</td>
-                        <td>{{ $notesheet->status }}</td>
-                        <td>{{ $notesheet->holder }}</td>
-                        <td>{{ $notesheet->updated_at }}</td>
-                    </tr>
+                    @foreach($notesheets as $notesheet)
+            
+                        <notesheet>
+                            <tr>
+                                <td><a href="{{ action('NotesheetsController@show', [$notesheet->id]) }}">{{ $notesheet->notesheet_id }}</a></td>
+                                <td>{{ $notesheet->created_at }}</td>
+                                <td>{{ $notesheet->subject }}</td>
+                                <td>{{ $notesheet->origin }}</td>
+                                <td>{{ $notesheet->destination }}</td>
+                                <td>{{ $notesheet->status }}</td>
+                                <td>{{ $notesheet->holder }}</td>
+                                <td>{{ $notesheet->updated_at }}</td>
+                            </tr>
+
+                         </notesheet>
+            
+                    @endforeach
                 </tbody>
 
-            </notesheet>
+            {{-- </notesheet>
             
-        @endforeach
-        </table>
-    </div>
+        @endforeach --}}
+     </table>
+    
 @stop

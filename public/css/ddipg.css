@@ -1,0 +1,62 @@
+.header {
+  color: #ee6e73;
+  font-weight: 300;
+}
+
+.caption {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 30px; }
+
+html{
+
+	/*-webkit-font-smoothing: antialiased;*/
+	/*min-width:100%;*/
+  /*font-weight: 300;*/
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #fcfcfc;
+  }
+
+ main{
+    flex: 1 0 auto;
+  }
+
+
+#card-form{
+	padding:25px;
+	
+}
+
+nav{
+	margin-bottom: 20px;
+}
+
+.text-content{
+  text-align: justify;
+  line-height: 1.75em;
+  font-weight: normal;
+}
+
+#vision li, #about-card li{
+  list-style-type: circle;
+}
+
+#about-card{
+  padding: 5px 35px;
+}
+
+
+/*header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }*/

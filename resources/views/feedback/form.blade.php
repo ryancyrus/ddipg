@@ -1,31 +1,36 @@
-<div class="form-group">
+<div class="row"><div class="input-field col s12">
 	{!! Form::label('Subject') !!}
-	{!! Form::text('subject', null, ['class'=> 'form-control']) !!}
-</div>
+	{!! Form::text('subject', null ) !!}
+</div></div>
 
-<div class="form-group">
-	{!! Form::label('Type') !!}
+<div class="row"><div class="input-field col s12">
+	{!! Form::label('type','Type') !!}
 	<br>
-	{!! Form::radio('type', 'Problem') !!}
-	{!! Form::label('Problem') !!}
 
-	{!! Form::radio('type', 'Suggestion') !!}
-	{!! Form::label('Suggestion') !!}
+	<p>
+								<input name='type' type="radio" id="type1" value="Suggestion">
+								<label for="type1">Suggestion</label>
+							</p>
+							<p>
+								<input name='type' type="radio" id = "type2" value="Complaint">
+								<label for="type2">Complaint</label>
+							</p>
+							<p>
+								<input name='type' type="radio" id = "type3" value="Feedback">
+								<label for="type3">Feedback</label>
+							</p>
+</div></div>
 
-	{!! Form::radio('type', 'Feedback') !!}
-	{!! Form::label('Feedback') !!}
-</div>
-
-<div class="form-group">
+<div class="row"><div class="input-field col s12">
 	{!! Form::label('Description') !!}
-	{!! Form::textarea('desc', null, ['class'=> 'form-control']) !!}
-</div>
+	{!! Form::textarea('desc', null, ['class' => 'materialize-textarea']) !!}
+</div></div>
 
-<div class="form-group">
+<div class="row"><div class="input-field col s12">
 	{!! Form::label('Email') !!}
-	{!! Form::email('email',  null, ['class'=> 'form-control']) !!}
-</div>
+	{!! Form::email('email',  null, ['class' => 'validate']) !!}
+</div></div>
 
-<div class="form-group">
-	{!! Form::submit($SubmitButton, ['class' => 'btn btn-primary form-control'])!!}
-</div>
+<div class="row"><div class="input-field col s12">
+	{!! Form::submit($SubmitButton, ['class' => 'btn'])!!}
+</div></div>

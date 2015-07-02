@@ -1,63 +1,63 @@
 @extends('app')
 
 @section('content')
-	{{-- <h2>Threads</h2> --}}
-    <div class ="table-responsive">
-        <table class="table">
-            <caption style='text-align: center'><h3>QnA</h3></caption>
-            <div class="btn-toolbar" role="toolbar" style='float:right'>
-                <div class="btn-group">
-                    <a href = "{{ action('ThreadsController@index')}}">
-                        <button type="button" class="btn btn-default">                      
+
+        <table class="responsive-table">
+            <caption style='text-align: center'><h3 class="header">QnA</h3></caption>
+            <div style='float:right'>
+                {{-- <div class="btn-group"> --}}
+                    <a class="waves-effect waves-light btn" href = "{{ action('ThreadsController@index')}}">
+                        {{-- <button type="button" class="btn btn-default">                       --}}
                             All
-                        </button>
+                        {{-- </button> --}}
                     </a>
 
                     
-                    <a href = "{{ action('ThreadsController@receive')}}">
-                        <button type="button" class="btn btn-default">                      
+                    <a class="waves-effect waves-light btn" href = "{{ action('ThreadsController@receive')}}">
+                        {{-- <button type="button" class="btn btn-default">                       --}}
                             @if(Auth::user()->type == 'Faculty')
                                 Yet To Reply
                             @elseif(Auth::user()->type == 'Student')
                                 Reply Awaited
                             @endif    
-                        </button>
+                        {{-- </button> --}}
                     </a>                    
                     
                     @if(Auth::user()->type == 'Student')
 
-                        <a href = "{{ action('ThreadsController@create')}}" >
-                            <button type="button" class="btn btn-primary">
+                        <a class="waves-effect waves-light btn" href = "{{ action('ThreadsController@create')}}" >
+                            {{-- <button type="button" class="btn btn-primary"> --}}
                                 Ask
-                            </button>
+                            {{-- </button> --}}
                         </a>
                     @endif 
                     
-                </div>
+                {{-- </div> --}}
             </div>
-            <thead style="background-color:#ff5252; color:#ffffff">
+            <thead>
 
                 <tr>
                     {{-- <td>Thread ID</td> --}}
-                    <td>Question</td>
-                    <td>Subject</td>
+                    <th>Question</th>
+                    <th>Subject</th>
 
                     @if(Auth::user()->type == 'Faculty')                    
-                        <td>Inquirer</td>
+                        <th>Inquirer</th>
                     @elseif(Auth::user()->type == 'Student')
-                        <td>Respondant</td>
+                        <th>Respondant</th>
                                         
                     @endif
                     
-                    <td>Reply</td>
+                    <th>Reply</th>
                     
                 </tr>
             </thead>
-        @foreach($threads as $thread)
-            
-            <thread>
+        
                 
                 <tbody>
+                    @foreach($threads as $thread)
+            
+            <thread>
                     <tr>
                         {{-- <td><a href="{{ action('ThreadsController@show', [$thread->id]) }}">{{ $thread->id }}</a></td> --}}
                         <td><a href="{{ action('ThreadsController@show', [$thread->id]) }}">{{ $thread->question}}</a></td>
@@ -73,11 +73,12 @@
                         <td>{{ $thread->reply }}</td>
                         
                     </tr>
-                </tbody>
-
-            </thread>
+                    </thread>
             
         @endforeach
+                </tbody>
+
+            
         </table>
-    </div>
+    
 @stop
